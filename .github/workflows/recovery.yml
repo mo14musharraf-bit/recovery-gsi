@@ -24,7 +24,7 @@ jobs:
         sudo apt install git wget lz4 tar openssl python3 -y
 
     - name: Fetch image from URL
-        run: |
+     run: |
           wget "${{ github.event.inputs.RECOVERY_URL }}" -O recovery.img.lz4
           lz4 -d recovery.img.lz4 recovery.img
           ls -lh recovery.img
